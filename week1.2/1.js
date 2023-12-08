@@ -1,2 +1,2 @@
-let a = 20
-print(a)
+let a = 20;
+print(a);
