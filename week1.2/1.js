@@ -1,11 +1,11 @@
-let firstname = "akhil"
-let lastname = "babu"
+// Count Down in javascript 30 to 0
 
-let gender = "m"
-
-for (i=0; i<1000; i++){
-    if(gender==="m")
-        console.log("Welcome "+firstname+" "+lastname+" for "+(i+1)+" time")
-    else if(gender==="f")
-        console.log("Who da female")
+let i = 30
+function countDown(){
+    console.log("T minus "+ i--)
+    if(i<0){
+        clearInterval(intervalID)
+    }
 }
+
+const intervalID=setInterval(countDown, 1000)

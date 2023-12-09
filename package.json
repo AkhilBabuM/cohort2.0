@@ -1,0 +1,11 @@
+{
+  "name": "cohort",
+  "version": "2.0.0",
+  "description": "various assignments and bounties with respect to cohort 2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akhil Babu",
+  "license": "ISC"
+}
