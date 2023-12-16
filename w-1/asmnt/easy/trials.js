@@ -15,14 +15,11 @@
 
 function calculateTotalSpentByCategory(transactions) {
   if (transactions.length == 0) return [];
-
   let object2=[];
   let priceMap= new Map();
-
   transactions.forEach(element => {
     const category = element.category;
     const totalSpent = element.price;
-    
     if(!priceMap.get(category))
       priceMap.set(category, totalSpent);
     else
@@ -33,4 +30,29 @@ function calculateTotalSpentByCategory(transactions) {
   return object2;
 }
 
-module.exports = calculateTotalSpentByCategory;
+let object1 = [
+  {
+    id: 1,
+    timestamp: 1656076800000,
+    price: 10,
+    category: "Food",
+    itemName: "Pizza",
+  },
+  {
+    id: 2,
+    timestamp: 1656076800000,
+    price: 20,
+    category: "Food",
+    itemName: "Burger",
+  },
+  {
+    id: 3,
+    timestamp: 1656076800000,
+    price: 20,
+    category: "Footwear",
+    itemName: "Burger",
+  },
+];
+
+let result = calculateTotalSpentByCategory(object1);
+console.log(result);
