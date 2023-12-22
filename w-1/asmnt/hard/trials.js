@@ -1,37 +1,28 @@
-class Calculator {
-  constructor(){this.result = 0}
+class Todo {
+  constructor(){
+    this.list=[]
+  }
+  add(item){
+    this.list[this.list.length]=item
+  }
+  remove(index){
 
-  add(num){
-    this.result += num
   }
-  subtract(num){
-    this.result -= num
-  }
-  multiply(num){
-    this.result *= num
-  }
-  divide(num){
-    if(num===0)
-      throw new RangeError("wtf bruh")
-    this.result /= num
-  }
-  clear(num){
-    this.result = 0
-  }
-  print(){
-    return this.result
-  }
-  calculate(string){
-    string = string.replace(/\s+/g,'').trim();
-    console.log(eval(string))
-  }
+  update(index, item){
 
+  }
+  getAll(){
+    console.log(this.list)
+  }
+  get(index){
+
+  }
+  clear(){
+    list=[]
+  }
 }
 
-let calculator = new Calculator()
-calculator.add(5)
-calculator.add(5)
-calculator.subtract(2)
-
-str = "(4+   3)*2"
-calculator.calculate(str)
+list1= new Todo();
+list1.add(2)
+list1.add("a")
+list1.getAll()
