@@ -4,7 +4,11 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  // if (str.length===1) return true
+  
+  str1=str.toLowerCase().replace(/[^a-z0-9]/g, '')
+  str2=str1.split("").reverse().join("")
+  return str2===str1 ? true : false
 }
 
 module.exports = isPalindrome;
