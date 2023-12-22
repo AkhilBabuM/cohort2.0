@@ -1,8 +1,6 @@
-str="Able, was I ere I saw Elba!"
-str1=str.toLowerCase().replace(/[^a-z0-9]/g, '')
-str2=str1.split("").reverse().join("")
+m=10
 
-console.log(str1)
-console.log(str2)
+for(i=1;i<=m;i++)
+  m=m+i
 
-console.log(str1===str2)
+console.log(m)
