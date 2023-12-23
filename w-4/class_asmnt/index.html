@@ -3,9 +3,23 @@
     <script>
       function printHello(){
         const textbox = document.getElementById("text-box")
+        const textbox2 = document.getElementById("text-box2")
         const input1 = document.getElementById("input1").value
         const input2 = document.getElementById("input2").value
         textbox.innerText= parseInt(input1)+parseInt(input2)
+        fetch("https://sum-server.100xdevs.com/sum?a="+input1+"&b="+input2)
+          .then(function(response){
+            console.log(response)
+
+            response.text()
+              .then(function(ans){
+                console.log(ans)
+                textbox2.innerHTML=ans
+              })
+          });
+      }
+      async function populateDiv(){
+        
       }
     </script>
   </head>
@@ -16,6 +30,11 @@
     <input id="input2" type="text" placeholder="number 2">
     <br/><br/>
     <button id="button1"onclick="printHello()">Sum</button>
-    <h2 id="text-box"></h2>
+    <h2 >Answer from the browser:  </h2><h2 id="text-box"></h2>
+    <h2 >Answer from the server: </h2><h2 id="text-box2"></h2>
+    <h2 >Answer from the server with async await: </h2><h2 id="text-box3"></h2>
   </body>
 </html>
+
+
+Can you create a repo for the class code you type so we can see how you commit the changes to some github repo for every changes made, so we can see the best practices
